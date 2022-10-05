@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   ft_isascii.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 15:32:55 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/05 16:14:22 by cschuijt      ########   odam.nl         */
+/*   Created: 2022/10/05 16:36:49 by cschuijt      #+#    #+#                 */
+/*   Updated: 2022/10/05 16:37:21 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	ft_isascii(int c)
 {
-
+	if (c >= 0 && c <= 127)
+		return (true);
+	return (false);
 }

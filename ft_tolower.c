@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalpha.c                                       :+:    :+:            */
+/*   ft_tolower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 16:15:16 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/06 11:49:08 by cschuijt      ########   odam.nl         */
+/*   Created: 2022/10/06 11:39:30 by cschuijt      #+#    #+#                 */
+/*   Updated: 2022/10/06 11:39:50 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
-
-int	ft_isalpha(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
-		return (true);
-	if (c >= 97 && c <= 122)
-		return (true);
-	return (false);
+		c = c + 32;
+	return (c);
 }

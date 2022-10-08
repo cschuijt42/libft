@@ -1,4 +1,4 @@
-objects = ft_atoi.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o\
+objects = ft_atoi.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
 					ft_isprint.o ft_strlen.o ft_substr.o ft_tolower.o ft_toupper.o
 flags = -Werror -Wall -Wextra
 NAME = libft
@@ -23,7 +23,8 @@ test : re
 	test/test
 
 norm :
-	norminette
+	norminette ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
+	ft_isprint.c ft_strlen.c ft_substr.c ft_tolower.c ft_toupper.c
 
 ft_atoi.o : ft_atoi.c
 	cc $(flags) -c ft_atoi.c

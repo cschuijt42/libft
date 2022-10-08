@@ -5,10 +5,22 @@ NAME = libft
 
 all : $(NAME)
 
-$(NAME) : $(objects)
-	cc -o $(NAME) $(flags) $(objects)
+$(NAME) : $(NAME).a
+
+$(NAME).a : $(objects)
+	ar rcs $(NAME).a $(objects)
 
 re : fclean all
+
+clean :
+	rm $(NAME).a $(objects)
+
+fclean :
+	rm -f $(NAME).a $(objects)
+
+test : re
+	cc test/munit.c test/test.c -o test/test
+	test/test
 
 norm :
 	norminette
@@ -42,9 +54,3 @@ ft_tolower.o : ft_tolower.c
 
 ft_toupper.o : ft_toupper.c
 	cc $(flags) -c ft_toupper.c
-
-clean :
-	rm libft.a $(objects)
-
-fclean :
-	rm -f libft.a $(objects)

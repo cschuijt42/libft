@@ -6,11 +6,14 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 13:54:42 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/08 14:03:45 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/08 16:08:17 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
+
+int	ft_strlen(const char *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

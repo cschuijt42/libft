@@ -6,13 +6,13 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 16:37:56 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/08 14:23:58 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/08 16:08:11 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_strlen(char *s, size_t maxlen)
+int	ft_strlen(const char *s)
 {
 	unsigned int	count;
 

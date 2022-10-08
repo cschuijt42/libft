@@ -6,19 +6,18 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 16:33:34 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/05 16:35:48 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/08 14:02:14 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 
+int	ft_isdigit(int c);
+int	ft_isalpha(int c);
+
 int	isalnum(int c)
 {
-	if (c >= 48 && c <= 57)
-		return (true);
-	if (c >= 65 && c <= 90)
-		return (true);
-	if (c >= 97 && c <= 122)
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (true);
 	return (false);
 }

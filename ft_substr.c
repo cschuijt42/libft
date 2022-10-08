@@ -6,17 +6,13 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 13:54:42 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/06 11:48:41 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/08 14:03:45 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-// TODO: Update len to size_t later!
-char	*ft_substr(char const *s, unsigned int start, unsigned int len);
-
-// TODO: Update len to size_t later!
-char	*ft_substr(char const *s, unsigned int start, unsigned int len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	total_length;
 	char			*pointer;

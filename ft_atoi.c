@@ -6,11 +6,13 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 12:25:38 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/08 13:04:40 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/08 14:06:45 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
+
+int	ft_isdigit(int c);
 
 static int	ft_isspace(int c)
 {
@@ -40,6 +42,7 @@ int	ft_atoi(char *str)
 	{
 		i = i * 10;
 		i = i + (*str - 48);
+		str++;
 	}
 	if (minuses % 2)
 		i = i * -1;

@@ -6,15 +6,17 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 16:44:15 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/06 11:36:35 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/08 14:23:38 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-char	*ft_substr(char const *s, unsigned int start, unsigned int len);
-int		ft_strnlen(char *s, unsigned int maxlen);
+# include <stddef.h>
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_strnlen(char *s, size_t maxlen);
 char	*ft_strjoin(char const *s1, char const *s2);
 int		isalnum(int c);
 int		ft_isalpha(int c);

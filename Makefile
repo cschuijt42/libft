@@ -110,9 +110,6 @@ ft_strnstr.o : ft_strnstr.c
 ft_strrchr.o : ft_strrchr.c
 	cc $(flags) -c ft_strrchr.c
 
-ft_strlen.o : ft_strlen.c
-	cc $(flags) -c ft_strlen.c
-
 ft_substr.o : ft_substr.c
 	cc $(flags) -c ft_substr.c
 
@@ -133,3 +130,6 @@ ft_putendl_fd.o : ft_putendl_fd.c
 
 ft_putnbr_fd.o : ft_putnbr_fd.c
 	cc $(flags) -c ft_putnbr_fd.c
+
+ft_strtrim.o : ft_strtrim.c
+	cc $(flags) -c ft_strtrim.c

@@ -6,13 +6,13 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 14:28:09 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/10 23:20:28 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/12 17:24:26 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int		ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

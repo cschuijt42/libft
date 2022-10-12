@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_strjoin.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 11:59:46 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/12 17:22:11 by cschuijt      ########   odam.nl         */
+/*   Created: 2022/10/11 14:56:06 by cschuijt      #+#    #+#                 */
+/*   Updated: 2022/10/12 17:21:15 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stddef.h>
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-char	*ft_strnstr(const char *hay, const char *needle, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	nlen;
+	size_t	len;
+	char	*ptr;
 
-	nlen = ft_strlen(needle);
-	if (nlen == 0)
-		return ((char *) hay);
-	while (*hay && len && len >= nlen)
-	{
-		if (*hay == *needle && ft_strncmp(hay, needle, nlen) == 0)
-			return ((char *) hay);
-		hay++;
-		len--;
-	}
-	return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	ptr = malloc(len + 1);
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, s1, len + 1);
+	ft_strlcat(ptr, s2, len + 1);
+	return (ptr);
 }

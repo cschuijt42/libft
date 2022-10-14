@@ -75,6 +75,18 @@ ft_memmove.o : ft_memmove.c
 ft_memset.o : ft_memset.c
 	cc $(flags) -c ft_memset.c
 
+ft_putchar_fd.o : ft_putchar_fd.c
+	cc $(flags) -c ft_putchar_fd.c
+
+ft_putendl_fd.o : ft_putendl_fd.c
+	cc $(flags) -c ft_putendl_fd.c
+
+ft_putnbr_fd.o : ft_putnbr_fd.c
+	cc $(flags) -c ft_putnbr_fd.c
+
+ft_putstr_fd.o : ft_putstr_fd.c
+	cc $(flags) -c ft_putstr_fd.c
+
 ft_split.o : ft_split.c
 	cc $(flags) -c ft_split.c
 
@@ -84,17 +96,20 @@ ft_strchr.o : ft_strchr.c
 ft_strdup.o : ft_strdup.c
 	cc $(flags) -c ft_strdup.c
 
+ft_striteri.o : ft_striteri.c
+	cc $(flags) -c ft_striteri.c
+
+ft_strjoin.o : ft_strjoin.c
+	cc $(flags) -c ft_strjoin.c
+
 ft_strlcat.o : ft_strlcat.c
 	cc $(flags) -c ft_strlcat.c
-
-ft_strlen.o : ft_strlen.c
-	cc $(flags) -c ft_strlen.c
 
 ft_strlcpy.o : ft_strlcpy.c
 	cc $(flags) -c ft_strlcpy.c
 
-ft_striteri.o : ft_striteri.c
-	cc $(flags) -c ft_striteri.c
+ft_strlen.o : ft_strlen.c
+	cc $(flags) -c ft_strlen.c
 
 ft_strmapi.o : ft_strmapi.c
 	cc $(flags) -c ft_strmapi.c
@@ -108,6 +123,9 @@ ft_strnstr.o : ft_strnstr.c
 ft_strrchr.o : ft_strrchr.c
 	cc $(flags) -c ft_strrchr.c
 
+ft_strtrim.o : ft_strtrim.c
+	cc $(flags) -c ft_strtrim.c
+
 ft_substr.o : ft_substr.c
 	cc $(flags) -c ft_substr.c
 
@@ -116,18 +134,3 @@ ft_tolower.o : ft_tolower.c
 
 ft_toupper.o : ft_toupper.c
 	cc $(flags) -c ft_toupper.c
-
-ft_putchar_fd.o : ft_putchar_fd.c
-	cc $(flags) -c ft_putchar_fd.c
-
-ft_putstr_fd.o : ft_putstr_fd.c
-	cc $(flags) -c ft_putstr_fd.c
-
-ft_putendl_fd.o : ft_putendl_fd.c
-	cc $(flags) -c ft_putendl_fd.c
-
-ft_putnbr_fd.o : ft_putnbr_fd.c
-	cc $(flags) -c ft_putnbr_fd.c
-
-ft_strtrim.o : ft_strtrim.c
-	cc $(flags) -c ft_strtrim.c

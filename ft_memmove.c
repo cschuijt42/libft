@@ -6,7 +6,7 @@
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/09 17:59:15 by cschuijt      #+#    #+#                 */
-/*   Updated: 2022/10/10 12:00:32 by cschuijt      ########   odam.nl         */
+/*   Updated: 2022/10/17 12:12:53 by cschuijt      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	void	*pnt;
 
 	pnt = dest;
-	if ((src + n - 1) > dest && src < dest)
+	if (!dest && !src)
+		return (pnt);
+	if (src < dest)
 		move_rtl(dest, src, n);
 	else
 	{

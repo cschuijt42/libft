@@ -4,7 +4,8 @@ objects = ft_atoi.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
 					ft_bzero.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o \
 					ft_calloc.o ft_strncmp.o ft_strlcat.o ft_strlcpy.o ft_strnstr.o \
 					ft_split.o ft_strtrim.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o \
-					ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_strjoin.o
+					ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_strjoin.o \
+					ft_putnbr_base.o
 bonus_objects = ft_lstadd_back.o ft_lstadd_front.o ft_lstclear.o \
 								ft_lstdelone.o ft_lstiter.o ft_lstlast.o ft_lstmap.o \
 								ft_lstnew.o ft_lstsize.o
@@ -147,6 +148,7 @@ ft_putendl_fd.o : ft_putendl_fd.c
 ft_putnbr_fd.o : ft_putnbr_fd.c
 	cc $(flags) -c ft_putnbr_fd.c
 
+# Bonus
 ft_lstadd_back.o : ft_lstadd_back.c
 	cc $(flags) -c ft_lstadd_back.c
 
@@ -173,3 +175,7 @@ ft_lstnew.o : ft_lstnew.c
 
 ft_lstsize.o : ft_lstsize.c
 	cc $(flags) -c ft_lstsize.c
+
+# My own
+ft_putnbr_base.o : ft_putnbr_base.c
+	cc $(flags) -c ft_putnbr_base.c

@@ -134,10 +134,10 @@ t_list	*ft_lstnew(void *content);
 // Returns the amount of items in list lst.
 int		ft_lstsize(t_list *lst);
 
-int		ft_put_nbr_base(size_t nbr, char *base);
-
 // -- FT_PRINTF --
 
+// Simple printf implementation that can handle the following flags:
+// %c, %s, %p, %x, %X, %d, %i, %u, %%
 int		ft_printf(const char *str, ...);
 
 int		printf_nbr_b(int n, char *base);
@@ -146,9 +146,16 @@ int		printf_string(char *str);
 int		printf_char(int c);
 int		printf_pointer(unsigned long n);
 
-
 // -- GET_NEXT_LINE --
 
+// Returns an allocated string containing the next line from the given file
+// descriptor, or NULL if there was an error/end of file was reached. Cleanup
+// only happens at EOF/error. Define BUFFER_SIZE to determine how much of
+// the file is read at once.
 char	*get_next_line(int fd);
+
+// -- OTHERS --
+
+int		ft_put_nbr_base(size_t nbr, char *base);
 
 #endif

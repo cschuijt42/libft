@@ -146,4 +146,9 @@ int		printf_string(char *str);
 int		printf_char(int c);
 int		printf_pointer(unsigned long n);
 
+
+// -- GET_NEXT_LINE --
+
+char	*get_next_line(int fd);
+
 #endif

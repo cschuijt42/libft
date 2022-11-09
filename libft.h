@@ -136,4 +136,14 @@ int		ft_lstsize(t_list *lst);
 
 int		ft_put_nbr_base(size_t nbr, char *base);
 
+// -- FT_PRINTF --
+
+int		ft_printf(const char *str, ...);
+
+int		printf_nbr_b(int n, char *base);
+int		printf_nbr_ub(unsigned int n, char *base);
+int		printf_string(char *str);
+int		printf_char(int c);
+int		printf_pointer(unsigned long n);
+
 #endif

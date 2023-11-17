@@ -19,8 +19,8 @@ int	ft_memcmp(const void *memory_1, const void *memory_2, size_t length)
 	size_t			i;
 
 	i = 0;
-	pointer_1 = memory_1;
-	pointer_2 = memory_2;
+	pointer_1 = (void *) memory_1;
+	pointer_2 = (void *) memory_2;
 	while (i < length && pointer_1[i] == pointer_2[i])
 		i++;
 	return (pointer_1[i] - pointer_2[i]);

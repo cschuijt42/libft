@@ -14,7 +14,7 @@
 #include "libft.h"
 
 static unsigned int	number_string_length(int number);
-static int			recursive_put_digit(char *string, long number);
+static void			recursive_put_digit(char *string, long number);
 
 char	*ft_itoa(int number)
 {
@@ -56,7 +56,7 @@ static unsigned int	number_string_length(int number)
 	return (length);
 }
 
-static int	recursive_put_digit(char *string, long number)
+static void	recursive_put_digit(char *string, long number)
 {
 	*string = (number % 10) + 48;
 	if (number >= 10)

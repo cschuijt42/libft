@@ -18,7 +18,7 @@ char	*ft_strtrim(const char *string, const char *set)
 	size_t			i;
 	size_t			substring_start;
 	size_t			substring_length;
-	const size_t	string_length = ft_strlen(string);
+	const size_t	string_length = ft_strlen((char *) string);
 
 	i = 0;
 	while (i < string_length && ft_strchr(set, string[i]))

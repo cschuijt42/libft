@@ -15,7 +15,7 @@
 
 char	*ft_strmapi(const char *string, char (*function)(unsigned int, char))
 {
-	const size_t	string_length = ft_strlen(string);
+	const size_t	string_length = ft_strlen((char *) string);
 	char			*output;
 	size_t			i;
 

@@ -15,7 +15,7 @@
 
 char	*ft_substr(const char *string, unsigned int start, size_t length)
 {
-	const size_t	string_length = ft_strlen(string);
+	const size_t	string_length = ft_strlen((char *) string);
 	char			*output;
 
 	if (start > string_length || length == 0)

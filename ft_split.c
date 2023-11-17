@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
 #include "libft.h"
 
 static unsigned int	substring_count(const char *string, char delimiter);

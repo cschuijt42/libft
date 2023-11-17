@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.h                                        :+:    :+:            */
+/*   ft_strdup.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cschuijt <cschuijt@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *string)
 {
 	char			*new_string;
-	const size_t	size = ft_strlen(string) + 1;
+	const size_t	size = ft_strlen((char *) string) + 1;
 
 	new_string = ft_calloc(1, size);
 	if (!new_string)

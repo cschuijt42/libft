@@ -39,7 +39,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dest_size);
 char	*ft_strchr(const char *string, int character);
 char	*ft_strrchr(const char *string, int character);
 
-int		ft_strncmp(const char *string_1, const char *string_2);
+int		ft_strncmp(const char *string_1, const char *string_2, size_t length);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t length);
 

@@ -25,14 +25,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*function)(void *), \
 		new_content = function(lst->content);
 		if (!new_content)
 		{
-			ft_lstclear(new_list, delete);
+			ft_lstclear(&new_list, delete);
 			return (NULL);
 		}
 		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
 			free(new_content);
-			ft_lstclear(new_list, delete);
+			ft_lstclear(&new_list, delete);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_list, new_node);

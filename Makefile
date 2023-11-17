@@ -63,6 +63,11 @@ $(NAME) : $(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
 	@printf "$(COMP_DONE)"
 
+bonus : $(BONUS_OBJS)
+	@printf "$(COMP_BEFORE)$(C_LGREEN)$@$(COMP_AFTER)"
+	@ar -rcs $(NAME) $(BONUS_OBJS)
+	@printf "$(COMP_DONE)"
+
 $(OBJ_DIR)/%.o : %.c $(HEADERS) | $(OBJ_DIR)
 	@printf "$(COMP_BEFORE)$(notdir $<)$(COMP_AFTER)"
 	@$(CC) $(COMPIL_FLAGS) -o $@ -c $<

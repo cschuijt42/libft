@@ -20,7 +20,7 @@ void	*ft_calloc(size_t size, size_t count)
 	void			*memory;
 	const size_t	maximum_value = -1;
 
-	if (maximum_value / size > count || maximum_value / count > size)
+	if (maximum_value / size < count || maximum_value / count < size)
 		return (NULL);
 	memory = malloc(size * count);
 	if (memory)

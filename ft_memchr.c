@@ -17,9 +17,12 @@ void	*ft_memchr(const void *memory, int character, size_t length)
 	size_t	i;
 
 	i = 0;
-	while (i < length && *(unsigned char *)(memory + i) != character)
+	while (i < length && \
+				*(unsigned char *)(memory + i) != (unsigned char) character)
 		i++;
-	if (*(unsigned char *)(memory + i) == character)
+	if (i == length)
+		return (NULL);
+	if (*(unsigned char *)(memory + i) == (unsigned char) character)
 		return ((void *) memory + i);
 	else
 		return (NULL);

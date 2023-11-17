@@ -28,7 +28,7 @@ char	*ft_itoa(int number)
 	if (number < 0)
 	{
 		output[0] = '-';
-		number_long = number * -1;
+		number_long = (long) number * -1;
 	}
 	else
 		number_long = number;

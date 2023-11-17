@@ -24,7 +24,10 @@ int	ft_atoi(const char *string)
 			string[i] == '\r' || string[i] == '\t' || string[i] == '\v')
 		i++;
 	if (string[i] == '-' || string[i] == '+')
+	{
 		sign = -1 * (string[i] - 44);
+		i++;
+	}
 	else if (!ft_isdigit(string[i]))
 		return (0);
 	else

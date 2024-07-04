@@ -49,7 +49,10 @@ SOURCEFILES	:=	ft_atoi.c  \
 				get_next_line_utils.c \
 				get_next_line.c \
 				ft_printf.c \
-				print_functions.c
+				print_functions.c \
+				ft_put_nbr_base.c \
+				ft_strchrc.c \
+				ft_digitcount.c
 
 HEADERS	:=	libft.h
 

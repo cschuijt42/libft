@@ -105,3 +105,9 @@ char	*get_next_line(int fd);
 
 int		ft_printf(const char *str, ...);
 int		ft_dprintf(int fd, const char *str, ...);
+
+// custom stuff
+
+int		ft_put_nbr_base(size_t nbr, char *base);
+size_t	ft_strchrc(char *str, char c);
+size_t	ft_digitcount(size_t num);

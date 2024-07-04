@@ -104,3 +104,4 @@ char	*get_next_line(int fd);
 // ft_printf
 
 int		ft_printf(const char *str, ...);
+int		ft_dprintf(int fd, const char *str, ...);

@@ -15,35 +15,35 @@
 #include <stddef.h>
 #include "ft_printf.h"
 
-static int	printf_replace_percent(const char *str, va_list valist)
+static int	printf_replace_percent(const char *str, va_list valist, int fd)
 {
 	str++;
 	if (*str == 'c')
-		return (printf_char(va_arg(valist, int)));
+		return (printf_char(va_arg(valist, int), fd));
 	if (*str == 's')
-		return (printf_string(va_arg(valist, char *)));
+		return (printf_string(va_arg(valist, char *), fd));
 	if (*str == 'p')
 	{
-		write(1, "0x", 2);
-		return (2 + printf_pointer(va_arg(valist, unsigned long)));
+		write(fd, "0x", 2);
+		return (2 + printf_pointer(va_arg(valist, unsigned long), fd));
 	}
 	if (*str == 'x')
-		return (printf_nbr_ub(va_arg(valist, long), "0123456789abcdef"));
+		return (printf_nbr_ub(va_arg(valist, long), "0123456789abcdef", fd));
 	if (*str == 'X')
-		return (printf_nbr_ub(va_arg(valist, long), "0123456789ABCDEF"));
+		return (printf_nbr_ub(va_arg(valist, long), "0123456789ABCDEF", fd));
 	if (*str == 'd' || *str == 'i')
-		return (printf_nbr_b(va_arg(valist, int), "0123456789"));
+		return (printf_nbr_b(va_arg(valist, int), "0123456789", fd));
 	if (*str == 'u')
-		return (printf_nbr_ub(va_arg(valist, unsigned int), "0123456789"));
+		return (printf_nbr_ub(va_arg(valist, unsigned int), "0123456789", fd));
 	if (*str == '%')
 	{
-		write(1, "%", 1);
+		write(fd, "%", 1);
 		return (1);
 	}
 	return (-1);
 }
 
-int	printf_loop(const char *str, va_list valist)
+int	printf_loop(const char *str, va_list valist, int fd)
 {
 	int	i;
 	int	j;
@@ -53,7 +53,7 @@ int	printf_loop(const char *str, va_list valist)
 	{
 		if (*str == '%')
 		{
-			j = printf_replace_percent(str, valist);
+			j = printf_replace_percent(str, valist, fd);
 			if (j < 0)
 				str++;
 			else
@@ -64,7 +64,7 @@ int	printf_loop(const char *str, va_list valist)
 		}
 		else
 		{
-			i += write(1, str, 1);
+			i += write(fd, str, 1);
 			str++;
 		}
 	}
@@ -77,7 +77,18 @@ int	ft_printf(const char *str, ...)
 	int			i;
 
 	va_start(valist, str);
-	i = printf_loop(str, valist);
+	i = printf_loop(str, valist, 1);
+	va_end(valist);
+	return (i);
+}
+
+int	ft_dprintf(int fd, const char *str, ...)
+{
+	va_list	valist;
+	int		i;
+
+	va_start(valist, str);
+	i = printf_loop(str, valist, fd);
 	va_end(valist);
 	return (i);
 }

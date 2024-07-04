@@ -16,10 +16,10 @@
 # include <stddef.h>
 # include "libft.h"
 
-int		printf_nbr_b(int n, char *base);
-int		printf_nbr_ub(unsigned int n, char *base);
-int		printf_string(char *str);
-int		printf_char(int c);
-int		printf_pointer(unsigned long n);
+int		printf_nbr_b(int n, char *base, int fd);
+int		printf_nbr_ub(unsigned int n, char *base, int fd);
+int		printf_string(char *str, int fd);
+int		printf_char(int c, int fd);
+int		printf_pointer(unsigned long n, int fd);
 
 #endif

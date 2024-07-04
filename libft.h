@@ -96,3 +96,11 @@ void	ft_lstclear(t_list **lst, void (*delete)(void*));
 void	ft_lstiter(t_list *lst, void (*function)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*function)(void *), \
 								void (*delete)(void *));
+
+// get_next_line
+
+char	*get_next_line(int fd);
+
+// ft_printf
+
+int		ft_printf(const char *str, ...);

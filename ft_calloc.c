@@ -27,3 +27,16 @@ void	*ft_calloc(size_t size, size_t count)
 		ft_bzero(memory, size * count);
 	return (memory);
 }
+
+void	*ft_calloc_exit(size_t size, size_t count)
+{
+	void	*pointer;
+
+	pointer = ft_calloc(size, count);
+	if (!pointer)
+	{
+		ft_dprintf(2, "Error\nMalloc failure");
+		exit(2);
+	}
+	return (pointer);
+}

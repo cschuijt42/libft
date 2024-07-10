@@ -49,6 +49,7 @@ void	ft_striteri(char *string, void (*function)(unsigned int, char *));
 // Memory manipulation functions
 
 void	*ft_calloc(size_t size, size_t count);
+void	*ft_calloc_exit(size_t size, size_t count);
 
 void	*ft_memset(void *memory, int byte, size_t length);
 void	ft_bzero(void *memory, size_t length);

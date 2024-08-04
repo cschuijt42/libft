@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stddef.h>
 
 // Char manipulation functions
 
@@ -112,3 +114,5 @@ int		ft_dprintf(int fd, const char *str, ...);
 int		ft_put_nbr_base(size_t nbr, char *base);
 size_t	ft_strchrc(char *str, char c);
 size_t	ft_digitcount(size_t num);
+
+#endif

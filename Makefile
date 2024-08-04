@@ -1,5 +1,5 @@
 NAME 			    := libft.a
-CC					:= gcc
+CC					:= cc
 
 COMPIL_FLAGS	?= -Wall -Wextra -Werror
 

@@ -21,6 +21,7 @@ int		ft_isdigit(int character);
 int		ft_isalnum(int character);
 int		ft_isascii(int character);
 int		ft_isprint(int character);
+int		ft_isspace(int character);
 
 // String manipulation functions
 

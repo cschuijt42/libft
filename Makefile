@@ -53,7 +53,8 @@ SOURCEFILES	:=	ft_atoi.c  \
 				ft_put_nbr_base.c \
 				ft_strchrc.c \
 				ft_digitcount.c \
-				ft_isspace.c
+				ft_isspace.c \
+				ft_strtod.c
 
 HEADERS	:=	libft.h
 

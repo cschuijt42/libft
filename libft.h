@@ -68,6 +68,8 @@ int		ft_memcmp(const void *memory_1, const void *memory_2, size_t length);
 
 int		ft_atoi(const char *string);
 
+double	ft_strtod(char *str, char **pointer);
+
 int		ft_toupper(int character);
 int		ft_tolower(int character);
 
